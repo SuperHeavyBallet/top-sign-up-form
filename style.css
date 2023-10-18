@@ -8,6 +8,7 @@
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
+    --light-grey-color: #e5e8eb;
     
 }
 
@@ -84,7 +85,7 @@
 .content-right{
     height: 100vh;
     width: 65%;
-    background-color: rgb(235, 236, 236);
+    background-color: var(--light-grey-color);
     display: flex;
     flex-direction: column;
 }
@@ -142,4 +143,58 @@ button{
 
 .bottom-strip > h5 > a{
     color: rgb(64, 116, 48);
+}
+
+#user_details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 2vh;
+}
+
+#user_details > div{
+    display: flex;
+    padding-top: 1vh;
+    flex-direction: column;
+    max-width: 10vw;
+
+  
+}
+
+#user_details > div > label{
+    font-size: x-small;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 0.4vh;
+}
+
+#user_details > div > input{
+    height: 2.8vh;
+    width: 13vw;
+    background-color: var(--light-grey-color);
+    opacity: 60%;
+    border-radius: 4px;
+    border: 1px solid #cfcfcf;
+    padding: 0.2vh 0.5vw;
+    outline: none;
+    font-size: medium;
+}
+
+#user_details > div > input:focus{
+    
+    
+    border-color: #0832be;
+    
+   
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.26);
+}
+
+#user_details > div > input.error{
+    border-color: rgb(201, 0, 0);
+
+}
+
+#user_details > div > h6{
+    color: rgb(201, 0, 0);
+    font-weight: lighter;
 }
