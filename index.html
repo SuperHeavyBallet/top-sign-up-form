@@ -38,28 +38,28 @@
 
                         <div>
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name" required>
+                        <input type="text" id="first_name" name="first_name" required pattern="[A-Za-z ]+" title="Only text is allowed" minlength="1" maxLength="20">
                     </div>
 
                     <div>
                         <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <input type="text" id="last_name" name="last_name" required required pattern="[A-Za-z ]+" title="Only text is allowed" minlength="1" maxLength="20">
                     </div>
 
                     <div>
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email"  name="email" required>
+                        <input type="email" id="email"  name="email" required title="Please use a standard email format" minlength="3" maxlength="50">
                     </div>
 
                     <div>
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input type="text" id="phone_number" name="phone_number" required>
+                        <input type="text" id="phone_number" name="phone_number" title="Please use a standard phone number format" minlength="3" maxlength="50">
                     </div>
 
                     <div>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" class="error" required>
-                        <h6>* Passwords do not match</h6>
+                        <input type="password" id="password" name="password" class="error" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password Must Contain: 1. At least one alphabetical character 2. At least one digit 3. At least one special character from the set `@$!%*?&> 4. Minimum length of 8 characters" minlength="8" maxlength="50">
+                        <h6 id="error-message">* Passwords do not match</h6>
                     </div>
 
                     <div>
